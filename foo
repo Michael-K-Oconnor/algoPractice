@@ -1,0 +1,20 @@
+// Write a function that determines if string contains only unique chatacters
+
+const isUnique1 = string => {
+  let tracker = {};
+  for (let char of string) {
+    if (tracker[char]) {
+      return false;
+    } else {
+      tracker[char] = true;
+    }
+  }
+  return true;
+}
+
+const isUnique2 = sting => {
+  string.sort();
+  return string.every((Char, idx) => {
+    return (idx === 0 || char === string[idx-1])
+  })
+}
