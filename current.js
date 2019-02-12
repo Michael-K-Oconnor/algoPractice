@@ -18,10 +18,15 @@ const isPermutation = (str1, str2) => {
       arr2[charIdx2] = 1;
     }
   }
-  for (let i = 0; i < max(arr1.length, arr2.length; i++) {
+  for (let i = 0; i < Math.max(arr1.length, arr2.length); i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
     }
   }
   return true;
-}
+};
+
+console.log(isPermutation("abc", "cba"));
+console.log(isPermutation("abc", "cbac"));
+console.log(isPermutation("", "cba"));
+console.log(isPermutation("", ""));

@@ -25,8 +25,10 @@ const isUnique2 = string => {
 // console.log(isUnique1("aa"));
 // console.log(isUnique1("aba"));
 
-console.log(isUnique2(""));
-console.log(isUnique2("a"));
-console.log(isUnique2("ab"));
-console.log(isUnique2("aa"));
-console.log(isUnique2("aba"));
+// console.log(isUnique2(""));
+// console.log(isUnique2("a"));
+// console.log(isUnique2("ab"));
+// console.log(isUnique2("aa"));
+// console.log(isUnique2("aba"));
+
+console.log(String.fromCharCode(123));
