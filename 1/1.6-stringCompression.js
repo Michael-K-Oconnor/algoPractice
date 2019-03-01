@@ -2,21 +2,16 @@ const stringCompression = string => {
   let result = "";
   let currChar = string[0];
   let currCharLen = 1;
-  for (let i = 1; i < string.length; i++) {
+  for (let i = 1; i <= string.length; i++) {
     if (string[i] === currChar) {
       currCharLen++;
     } else {
-      result = result + currChar + currCharLen;
+      result += currChar + currCharLen;
       currChar = string[i];
       currCharLen = 1;
     }
   }
-  result = result + currChar + currCharLen;
-  if (result.length < string.length) {
-    return result;
-  } else {
-    return string;
-  }
+  return result.length < string.length ? result : string;
 };
 
 function assert(expectedBehavior, descriptionOfCorrectBehavior) {
@@ -28,3 +23,5 @@ function assert(expectedBehavior, descriptionOfCorrectBehavior) {
 }
 
 assert(stringCompression("") === "", "Empty string should return empty string");
+console.log(stringCompression("aaabbbbaaa"));
+console.log(stringCompression("aa"));
