@@ -1,7 +1,7 @@
 const rotateMatrix = matrix => {
   let n = matrix.length;
   if (n < 2) return matrix;
-  let maxIdx = Math.ceil(n / 2);
+  let maxIdx = n / 2;
   for (let row = 0; row < maxIdx; row++) {
     for (let col = row; col < maxIdx; col++) {
       [
